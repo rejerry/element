@@ -22,7 +22,7 @@ export default {
       type: String,
       default: 'div'
     },
-    scrollTop: 0,
+    scrollTop: 0
   },
 
   data() {
@@ -34,9 +34,11 @@ export default {
     };
   },
 
-  scrollTop() {
-    let wrap = this.wrap;
-    wrap.scrollTop = this.scrollTop;
+  watch: {
+    scrollTop() {
+      let wrap = this.wrap;
+      wrap.scrollTop = this.scrollTop;
+    }
   },
 
   computed: {
