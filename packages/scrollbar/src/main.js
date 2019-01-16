@@ -21,7 +21,8 @@ export default {
     tag: {
       type: String,
       default: 'div'
-    }
+    },
+    scrollTop: 0,
   },
 
   data() {
@@ -31,6 +32,11 @@ export default {
       moveX: 0,
       moveY: 0
     };
+  },
+
+  scrollTop() {
+    let wrap = this.wrap;
+    wrap.scrollTop = this.scrollTop;
   },
 
   computed: {
